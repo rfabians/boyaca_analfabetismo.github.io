@@ -23,17 +23,18 @@ Para este fin se descargo la información del DANE del censo población del 2018
 Información Alfanumerica: [Colombia - Censo Nacional de Población y Vivienda - CNPV - 2018 (dane.gov.co)](https://microdatos.dane.gov.co/index.php/catalog/643/get-microdata)
 
 Información Geográfica: [Descarga de Información Geográfica - Geovisor CNPV 2018 (dane.gov.co)](https://geoportal.dane.gov.co/servicios/descarga-y-metadatos/visor-descarga-geovisores/)
+
 Descarga la información se procedio a cargarla dentro de postgis, para lo cual se utilizo el Software QGIS.
 
 
-![[MunicipiosBoyaca.png]]
+![imagen](https://raw.githubusercontent.com/rfabians/boyaca_analfabetismo.github.io/main/MunicipiosBoyaca.png)
 
 
-![[censoPersonas.png]]
+![imagen](https://raw.githubusercontent.com/rfabians/boyaca_analfabetismo.github.io/main/censoPersonas.png))
 
 Realizado la carga de datos se aprecia  que las columnas de los identificadores de los codigos de Departemento y Municipia se encuentra en formato de tipo entero en la tabla con la información alfanumerica, sin embargo en la tabla con la información de los municipios estas columnas son de tipo texto.
 
-![[tablaAlfanumerica.png]]
+![tablaAlfanumerica.png (1284×541) (raw.githubusercontent.com)](https://raw.githubusercontent.com/rfabians/boyaca_analfabetismo.github.io/main/tablaAlfanumerica.png)
 
 Con el objetivo de establecer la referencia entre los datos espaciales y los alfanumericos se hace necesario parsear los tipos de datos a un tipo de dato en común.
 
