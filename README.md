@@ -45,7 +45,7 @@ ALTER TABLE public.censo_personas ALTER COLUMN u_mpio TYPE varchar(3) USING u_mp
 
 Con el tipo de datos ajustado se procedio a actualizar los campos inconsistentes, añadiendo los ceros a la izquierda a los municipios faltante.
 
-``` sql:
+``` sql
 update public.censo_personas 
 set u_mpio = t.cod_munipio from(select case 
 	when char_length(u_mpio)= 1 then '00'||u_mpio
@@ -57,13 +57,13 @@ where t.u_mpio = public.censo_personas.u_mpio;
 
 Una vez actualizados los ID de los municipios del departamento de Boyacá se procede a obtener la  cantidad de los personsa analfabetas por municipio.
 
-``` sql:
+``` sql
 ALTER TABLE public.municipios ADD personas_analfabetas int4;
 ```
 
 Posteriormente se procede a realizar el conteo de personas analfabetas por municipio.
 
-``` sql:
+``` sql
 update public.municipios m
 set personas_analfabetas = t.cantidad from (
 select u_mpio, count(*) as cantidad from
