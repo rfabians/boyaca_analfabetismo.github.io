@@ -38,7 +38,7 @@ Realizado la carga de datos se aprecia  que las columnas de los identificadores 
 
 Con el objetivo de establecer la referencia entre los datos espaciales y los alfanumericos se hace necesario parsear los tipos de datos a un tipo de dato en común.
 
-``` sql:
+``` sql
 ALTER TABLE public.censo_personas ALTER COLUMN u_dpto TYPE varchar(3) USING u_dpto::varchar;
 ALTER TABLE public.censo_personas ALTER COLUMN u_mpio TYPE varchar(3) USING u_mpio::varchar;
 ```
